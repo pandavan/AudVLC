@@ -5,7 +5,7 @@ AudVLC is a simple bash script which will enaable Linux users with an installed 
 
 
 
-1) Download the AudVLC.sh basch script
+1) Download the AudVLC.sh bash script
 
 2) Make AudVLC.sh as executable file using *$ chmod +x Aud.sh*
 
@@ -14,5 +14,5 @@ AudVLC is a simple bash script which will enaable Linux users with an installed 
 
 
 
-
+Currently this script is working with VLC 2.1.X version and UBUNTU 12 and upper
 
