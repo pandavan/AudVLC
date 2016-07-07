@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#
+#https://github.com/pandavan/AudVLC/
 #AudVLC audio web streaming for Linux system from youtube,dailymotion, vimeo and other sites which are compatible with your installed VLC player
 
 # install vlc 
