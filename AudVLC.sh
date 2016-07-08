@@ -10,13 +10,18 @@
 
 function YouAud {	
 	
-# Copying and validation of url from clipbord using xsel
+# Copying and validation of url from clipbord using xsel -a  $clpy != $regex 
 
+#checking whether AudVLC is empty or not
+
+var=$(head -n1 $HOME/AudVLC)
 #edit regex variable to add more website
 regex='((http://)?)(www\.)?((youtube\.com/)|(youtu\.be)|(youtube)|(dailymotion\.com/)|(dailymotion)|(vimeo\.com/)|(vimeo)).+';
 clpy=$(xsel -b);
 if [[ $clpy =~ $regex ]];then
 clpy=$clpy;
+elif [[ ( -e $HOME/AudVLC ) && ( $clpy != $regex ) && ( -s $HOME/AudVLC ) ]]; then
+clpy=$var
 else
 clpy="http://"
 fi
@@ -46,6 +51,8 @@ echo $OUTPUT
 echo ""
 echo "WAIT FOR SOME MINUTES"
 echo ""
+echo -n > ~/AudVLC
+echo $OUTPUT >> ~/AudVLC
 cvlc --vout none $OUTPUT	
 else
 zenity --info --width=300 --title="AudVLC" --timeout=3 --text="Wrong Streaming URL"
@@ -57,5 +64,3 @@ fi
 }
 
 YouAud;
-
-# Working in Ubuntu System
