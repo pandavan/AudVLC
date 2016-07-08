@@ -1,6 +1,6 @@
 # AudVLC
 
-AudVLC is a simple bash script which will enaable Linux users with an installed VLC player, stream their favourite videos and playlist as audios from famous video streaming websites like YouTube, Dailymotion, Vimeo and many more.
+AudVLC is a simple bash script with GUI which will enable Linux users with an installed VLC player, stream their favourite videos and playlist as audios from famous video streaming websites like YouTube, Dailymotion, Vimeo and many more.
 
 
 
