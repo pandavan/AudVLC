@@ -7,6 +7,8 @@
 # If you wants to play youtube playlist then download lua file from http://addons.videolan.org/content/show.php/+Youtube+playlist?content=149909
 # install xsel (Optional)
 
+#quality of streaming video 240,360,720 etc
+quality="240"
 
 function YouAud {	
 	
@@ -53,7 +55,7 @@ echo "WAIT FOR SOME MINUTES"
 echo ""
 echo -n > ~/AudVLC
 echo $OUTPUT >> ~/AudVLC
-cvlc --vout none $OUTPUT	
+cvlc --preferred-resolution $quality --no-video $OUTPUT		
 else
 zenity --info --width=300 --title="AudVLC" --timeout=3 --text="Wrong Streaming URL"
 YouAud;
