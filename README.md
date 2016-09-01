@@ -48,5 +48,5 @@ audio="yes" #If you want to stream audio keep it as "yes" else if you need video
 #Stoping Streaming (IMPORTANT)
 
 - You have to press OK to stop the streaming process
-- else you have to kill VLC process
+- else you have to kill VLC process manually
 
