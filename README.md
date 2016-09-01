@@ -7,9 +7,13 @@ AudVLC is a simple bash script with GUI which will enable Linux users with an in
 
 1) Download the `AudVLC.sh (zenity)` or `AudVLC (yad).sh (yad)` bash script
 
-2) Make AudVLC.sh as executable file using *$ chmod +x Aud.sh*
+2) Customize parameter or after installation change it from $HOME/.AudVLC/AudVLC.sh
 
-3) Execute AudVLC.sh file and paste the streaming URL in the text box
+3) Make AudVLC.sh as executable file using *$ chmod +x Aud.sh*
+
+4) Execute AudVLC.sh file for installation
+
+5) Paste the streaming URL in the textbox and select quality if you are using yad supported file.
 
 # Requirments
 
