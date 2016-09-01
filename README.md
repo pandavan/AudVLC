@@ -9,7 +9,7 @@ AudVLC is a simple bash script with GUI which will enable Linux users with an in
 
 2) Customize parameter or after installation change it from $HOME/.AudVLC/AudVLC.sh
 
-3) Make AudVLC.sh as executable file using *$ chmod +x Aud.sh*
+3) Make AudVLC.sh as executable file using `$ chmod +x AudVLC.sh`
 
 4) Execute AudVLC.sh file for installation
 
