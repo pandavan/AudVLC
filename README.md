@@ -34,7 +34,7 @@ audio="yes" #If you want audio keep it as "yes" else if you need video keep "no"
 - Use less system resources
 - Prevents over heating of system while streaming. A 10-20 degree celcius (system test result) decrease in temperature is noted when compared to streaming from ordinary VLC player GUI or from browser
 - Fast streaming
-- Can select different quality of audios
+- Can select different quality of audios and videos
 
 #Executing AudVLC from Ubuntu Unity Launcher
 
