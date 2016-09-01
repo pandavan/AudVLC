@@ -12,7 +12,7 @@
 #quality of streaming video 240,360,720 etc
 quality="360"
 
-audio="yes" #If you want audio keep it as "yes" else if you need video keep "no"
+audio="yes" #If you want to stream audio keep it as "yes" else if you need video as well keep "no"
 
 ##########################################################
 
