@@ -12,7 +12,7 @@
 #quality of streaming video 240,360,720 etc
 quality="360"
 
-audio="yes" #If you want to stream audio keep it as "yes" else if you need video as well keep "no"
+audio="yes" #If you want audio keep it as "yes" else if you need video keep "no"
 
 ##########################################################
 
@@ -69,7 +69,7 @@ echo $OUTPUT >> ~/AudVLC
 if [ $audio == "yes" ]; then
 cvlc --preferred-resolution $quality --no-video $OUTPUT & KILL=$(zenity --notification --title="AudVLC" --window-icon="info"  --text="`printf "WARNING AudVLC: \n\n DON'T PRESS CANCEL OR CLOSE \n\n PRESS ONLY OK TO STOP AND KILL VLC MEDIA PLAYER"`")	
 else
-cvlc --preferred-resolution $quality $OUTPUT & KILL=$(zenity --notification --title="AudVLC" --window-icon="info"  --text="`printf "WARNING AudVLC: \n\n DON'T PRESS CANCEL OR CLOSE \n\n PRESS ONLY OK TO STOP AND KILL VLC MEDIA PLAYER"`")	
+vlc --preferred-resolution $quality $OUTPUT & KILL=$(zenity --notification --title="AudVLC" --window-icon="info"  --text="`printf "WARNING AudVLC: \n\n DON'T PRESS CANCEL OR CLOSE \n\n PRESS ONLY OK TO STOP AND KILL VLC MEDIA PLAYER"`")	
 fi
 
 #validating submittion and quitting VLC media player
@@ -77,34 +77,22 @@ accepted=$?
 
 
 if [ $accepted -eq 2 ]; then
-PID_ZENITY=${!}
-PID_CHILD=$(pgrep -o -P $$)
-kill PID_CHILD
+pkill zenity
 id=$(pgrep vlc)
 kill $id
 exit
-PID_ZENITY=${!}
-PID_CHILD=$(pgrep -o -P $$)
-kill PID_CHILD
 elif [ $accepted -eq 1 ]; then
+pkill zenity
 id=$(pgrep vlc)
 kill $id
 exit 
 elif  [ $accepted -eq 0 ]; then
-PID_ZENITY=${!}
-PID_CHILD=$(pgrep -o -P $$)
-kill PID_CHILD
-id=$(pgrep vlc)
+pkill zenity
 kill $id
 exit 
 fi
 else
-PID_ZENITY=${!}
-PID_CHILD=$(pgrep -o -P $$)
-kill PID_CHILD
-id=$(pgrep vlc)
-kill $id
-exit  
+echo ""
 fi
 
 
@@ -133,6 +121,8 @@ wget -N -P $HOME/.AudVLC/ http://i.imgur.com/PCRZK1g.png
 YouAud;
 else
 echo -e "\nAll programms and packages installed"
+#killing already running zenity process
+pkill zenity
 YouAud;
 fi
 
