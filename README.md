@@ -23,7 +23,7 @@ AudVLC is a simple bash script with GUI which will enable Linux users with an in
 
 3) [xsel](https://apps.ubuntu.com/cat/applications/xsel/)
 
-4) [yad](http://www.webupd8.org/2010/12/yad-zenity-on-steroids-display.html) for `AudVLC-yad.s file
+4) [yad](http://www.webupd8.org/2010/12/yad-zenity-on-steroids-display.html) for `AudVLC-yad.sh` file
 
 #Changing parameters
 *for AudVLC.sh Only*
