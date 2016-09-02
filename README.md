@@ -45,11 +45,15 @@ audio="yes" #If you want to stream audio keep it as "yes" else if you need video
 
 #Executing AudVLC from Ubuntu Unity Launcher
 
-- First execute the AudVLC.sh script then search AudVLC in the Search bar
+- First execute the AudVLC.sh or AudVLC-yad.sh script then search AudVLC in the Search bar
 - Then Lock AudVLC to launcher
 
 #Stoping Streaming (IMPORTANT)
 
 - You have to press OK to stop the streaming process
 - else you have to kill VLC process manually
+
+#Installation folder
+
+-`$HOME/.AudVLC/`
 
