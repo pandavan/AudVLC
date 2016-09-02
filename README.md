@@ -5,7 +5,7 @@ AudVLC is a simple bash script with GUI which will enable Linux users with an in
 
 
 
-1) Download the `AudVLC.sh (zenity)` or `AudVLC (yad).sh (yad)` bash script
+1) Download the `AudVLC.sh (zenity)` or `AudVLC-yad.sh (yad)` bash script
 
 2) Customize parameter or after installation change it from $HOME/.AudVLC/AudVLC.sh
 
@@ -17,11 +17,13 @@ AudVLC is a simple bash script with GUI which will enable Linux users with an in
 
 # Requirments
 
-1) Any modern Ubuntu distros
+1) Any latest Ubuntu distros
 
-2) VLC player
+2) VLC Media Player
 
 3) [xsel](https://apps.ubuntu.com/cat/applications/xsel/)
+
+4) [yad](http://www.webupd8.org/2010/12/yad-zenity-on-steroids-display.html) for `AudVLC-yad.s file
 
 #Changing paragmeters
 - You can change parameters in this section of AudVLC.sh code
