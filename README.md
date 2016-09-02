@@ -7,7 +7,7 @@ AudVLC is a simple bash script with GUI which will enable Linux users with an in
 
 1) Download the `AudVLC.sh (zenity)` or `AudVLC-yad.sh (yad)` bash script
 
-2) Customize parameter or after installation change it from $HOME/.AudVLC/AudVLC.sh
+2) Customize parameter or after installation change it from `$HOME/.AudVLC/AudVLC.sh`
 
 3) Make AudVLC.sh as executable file using `$ chmod +x AudVLC.sh`
 
