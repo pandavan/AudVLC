@@ -10,7 +10,7 @@
 #################PARAMETERS###################
 #NO NEED TO CHANGE ANY PARAMETERS IN THIS FILE
 #quality of streaming video 240,360,720 etc
-quality="240" 
+#quality="240" 
 
 audio="FALSE" #If you want audio keep it as "yes" else if you need video keep "no"
 
@@ -22,13 +22,15 @@ function YouAud {
 
 #checking whether AudVLC is empty or not
 
-var=$(head -n1 $HOME/AudVLC)
+var=$(head -n1 $HOME/.AudVLC/AudVLC)
 #edit regex variable to add more website
 regex='((http://)?)(www\.)?((youtube\.com/)|(youtu\.be)|(youtube)|(dailymotion\.com/)|(dailymotion)|(vimeo\.com/)|(vimeo)).+';
 clpy=$(xsel -b);
 if [[ $clpy =~ $regex ]];then
+#removing playlist parameters
+clpy="$(echo "$clpy"|sed "s/&.*//")"
 clpy=$clpy;
-elif [[ ( -e $HOME/AudVLC ) && ( $clpy != $regex ) && ( -s $HOME/AudVLC ) ]]; then
+elif [[ ( -e $HOME/.AudVLC/AudVLC ) && ( $clpy != $regex ) && ( -s $HOME/.AudVLC/AudVLC ) ]]; then
 clpy=$var
 else
 clpy="http://"
@@ -37,7 +39,7 @@ fi
 inpu=$(yad --form --center --window-icon="gtk-execute" --text="\nEnter Streaming Information:\n" --title="AudVLC"\
              --width="500" --field="URL" $clpy\
              --field="Quality:CBE" 360\!240\!480\!720\!1080 \
-             --field="Audio:CHK" TRUE )
+             --field="Audio:CHK" FALSE )
 
 #validating submittion
 accepted=$?
@@ -70,8 +72,8 @@ echo "Stream Audio= $audio"
 echo ""
 echo "WAIT FOR SOME MINUTES"
 echo ""
-echo -n > ~/AudVLC
-echo $OUTPUT >> ~/AudVLC
+echo -n > ~/.AudVLC/AudVLC
+echo $OUTPUT >> ~/.AudVLC/AudVLC
 
 if [ $audio == "TRUE" ]; then
 cvlc --preferred-resolution $quality --no-video $OUTPUT & KILL=$(zenity --notification --title="AudVLC" --window-icon="info"  --text="`printf "WARNING AudVLC: \n\n DON'T PRESS CANCEL OR CLOSE \n\n PRESS ONLY OK TO STOP AND KILL VLC MEDIA PLAYER"`")	
